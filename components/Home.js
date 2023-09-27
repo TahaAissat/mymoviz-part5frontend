@@ -42,7 +42,7 @@ function Home() {
     .then(response=>response.json())
     .then(data => {
       let tempArr = []
-      for(let movie of data.movies.results){
+      for(let movie of data.movies){
        let {title,poster_path,vote_average,vote_count,overview} = movie
        if(movie.overview.length < 250){
       tempArr.push({title,poster_path,vote_average,vote_count,overview})
